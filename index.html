@@ -130,7 +130,19 @@
                     </footer>  
                 </article>
             </section>
+            <section>
+                <h2>Preguntas frecuentes</h2>
 
+                <details open>
+                    <summary>¿Qué estudios tienes?</summary>
+                    <p>Estudié en la UNMSM la carrera de ingeniría de software durante 5 años.</p>
+                </details>
+
+                <details>
+                    <summary>¿Cuáles son tus hobbies?</summary>
+                    <p>Me gusta mucho los deportes, como el futbol, el baloncestos, etc. Ademas me gusta tocar la guitarra.</p>
+                </details>
+            </section>
             <section>
                 <h2>Formulario de contacto</h2>
 
@@ -173,8 +185,23 @@
                         <label style="display: block;">¿Aceptas los terminos?
                             <input type="checkbox" required>
                         </label>
+                        <div>
+                            <datalist id="languages">
+                                <option value="JavaScript"></option>
+                                <option value="Java"></option>
+                                <option value="C++"></option>
+                                <option value="Python"></option>
+                            </datalist>
+                            <label>
+                                ¿Con que lenguaje quieres que te ayude?
+                                <input list="languages" name="languages">
+                            </label>
+                        </div>
+                        
                     </fieldset>
                     <input type="submit" value="Enviar contacto">
+                    <!--Solo dentro de un form el button es de tipo "submit"-->
+                    <button>Enviar contacto</button>
                 </form>
             </section>
         </main>
