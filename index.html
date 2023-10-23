@@ -1,0 +1,187 @@
+<!--Estructura basica-->
+<!DOCTYPE html>
+<html>
+    <!--En el head se pone metadata y demas-->
+    <head>
+       <meta charset="utf-8"> <!--Codificación-->
+       <!--Esto hce q el sitio sea adaptable-->
+       <meta name="viewport" content="width=device-width">
+       <title>Primer html</title>
+        <!--Esto pone una descripción-->
+       <meta name="description" content="Este es una descripción de mi primer html">
+       <!--Indica si tiene que indexar la pagina y si tiene
+            que seguir los enlaces-->
+       <meta name="robots" content="index, follow">
+       <meta name="theme-color" content="#09f">
+
+        <!--OPEN GRAPH-->
+        <meta property="og:title" content="Primer html">
+        <meta property="og:description" content="Este es el primer html que creo">
+        <meta property="og:image" content="/images/michi.jpg">
+        <meta property="og:image:alt" content="michi">
+
+        <!--la misma pagina pero en ingles:-->
+        <link rel="alternate"   href="https://primera.pagina/en"
+        hreflang="en-GB">
+        <!--Indicamos cual es la pagina principal de nuestro sitio-->
+        <link rel="canonical" href="https://primera.pagina">
+
+        <style>
+            body {
+                background: rgb(148, 200, 243);
+            }
+        </style>
+
+       <!--Me enlaza a un recurso-->
+       <link rel="icon" type="image/png" href="images/icono_principal.png">
+    </head>
+    <body>
+        <header>
+            <!--Con esto contruyo los titulos --> 
+            <h1>TENGO SUEÑO</h1>
+            <nav>
+                <!--Enlaces internos-->
+                <a href="#frutas">Frutas</a>
+                <a href="#proyectos">Proyectos</a>
+                <!--Enlaces externos-->
+                <a href="https://twitch.tv/midudev" target="_blank"
+                    rel="noreferrer">Twitch</a>
+            </nav>
+        </header>
+        
+        
+        <main>
+            <h2> Subtitulo</h2>
+            <!--Esto es una anidación y un parrafo --> 
+            <p>Hola, estoy aprendiendo el <strong> concepto de las etiquetas</strong> 
+                en html, y este es mi primer parrafo. Que ez es html
+            </p>
+
+            <h2 id="frutas">Frutas:</h2>
+
+            <!--Esto es una lista--> 
+            <ul>
+                <li>Manzana</li>
+                <li>Pera</li>
+                <li>Platano</li>
+                <li>Fresa</li>
+            </ul>
+
+            <h2>Ahora veremos una imagen</h2>
+            <!--Etiquetas reemplazables: --> 
+            <!--nota: title, alt y type son atributos --> 
+           <a href="/images/michi.jpg" target="_blank">
+                <img 
+                    width="250"
+                    height=250 
+                    title="Foto de michi" 
+                    alt="Es un gatito con sueño zzzz" 
+                    src="/images/michi.jpg"
+                >
+            </a>
+            <br>
+            <br>
+            <input type="datetime-local">
+            <br>
+
+            <!--Vamos a ver una estructura semantica-->
+            <h2 id="proyectos">Proyectos</h2>
+
+            <!--<aside>:Contenido complementario-->
+            <aside>
+                <header>
+                    <h3>Mis lenguajes favoritos</h3>
+                </header>
+                <!--Lista ordenada-->
+                <ol type="I">
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ol>
+                <button>
+                    Haz click aqui
+                </button>
+            </aside>
+            
+            <section>
+                <article>
+                    <header>
+                        <h4>Sitio web corporativo</h4>
+                    </header>
+                    <p>
+                        Desarrollo de una interfaz corporativa con una interfaz amigable y moderna
+                    </p>
+                    <footer>
+                        <small>Tecnologias utilizadas: HTML, CSS, JAVASCRIPT</small>
+                    </footer>  
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <header>
+                        <h4>Sitio web corporativo</h4>
+                    </header>
+                    <p>
+                        Desarrollo de una interfaz corporativa con una interfaz amigable y moderna
+                    </p>
+                    <footer>
+                        <small>Tecnologias utilizadas: HTML, CSS, JAVASCRIPT</small>
+                    </footer>  
+                </article>
+            </section>
+
+            <section>
+                <h2>Formulario de contacto</h2>
+
+                <form method="post" action="/">
+                    <fieldset>
+                        <legend>Información personal</legend>
+                        <!--El usuario ingrese un dato(forma 1: usa id)-->
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" placeholder="Alvin pavo" required>
+                        
+                        <!--El usuario ingrese un dato(forma 2:no usa id)-->
+                        <label style="display: block;">Apellidos:
+                            <input 
+                                type="text" 
+                                placeholder="Davilar Rafiña"
+                                required
+                            >
+                        </label>
+                        <label style="display: block;">Email:
+                            <input type="email" placeholder="alvin@gmail.com" required>
+                        </label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Información adicional</legend>
+                        <label style="display: block;">Teléfono:
+                            <input type="tel" placeholder="123456789" required pattern="[0-9]{9}">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Otros</legend>
+                        <label for="why">¿Por qué quieres contactar?</label>
+                        <select name="why" id="why">
+                            <option value="1">Trabajo</option>
+                            <option value="2">Duda</option>
+                            <option value="3">mas</option>
+                        </select>
+
+                        <label style="display: block;">¿Aceptas los terminos?
+                            <input type="checkbox" required>
+                        </label>
+                    </fieldset>
+                    <input type="submit" value="Enviar contacto">
+                </form>
+            </section>
+        </main>
+        <br>
+        <footer>
+            Copyright  @ 2023 - MI HTMLPRO 
+        </footer>
+    </body>
+</html> 
+
