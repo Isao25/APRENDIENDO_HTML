@@ -26,14 +26,60 @@
         <!--Indicamos cual es la pagina principal de nuestro sitio-->
         <link rel="canonical" href="https://primera.pagina">
 
-        <style>
-            body {
-                background: rgb(148, 200, 243);
-            }
-        </style>
-
+        
        <!--Me enlaza a un recurso-->
        <link rel="icon" type="image/png" href="images/icono_principal.png">
+
+       <style>
+            /*Selector mediante etiquetas*/
+            h1{
+                /*color: rgba(0,0,0,50%);  legaci */
+                /*color: rgb(0 0 0/ 50%); /*Moderno y recomendo*/
+                /*color: hsl(348, 83%, 44%); /*h:rotación, s:saturación, l:luminosidad*/
+                /*color: oklch(340 83% 44% / 50%);*/
+                color: rgb(255, 72, 0);
+                /*border-width: 3px;
+                border-style: solid;
+                border-color: currentColor; */
+            }
+
+            /*Selector mediante clases*/
+            .link{
+                color: chocolate;
+                font-family: monospace;
+            }
+            /*PSEUDOCLASE:*/
+            /*Esto permite que cuando el puntero esté encima del elemento, pase algo*/
+            .link:hover{
+                color: yellowgreen;
+                /*border: 5px solid red; -> Es algo que afecta al contenido*/
+                /*outline: 3px solid red; -> Es un contorno que se dibuja encima*/ 
+            }
+            /*Cuando un elemento esta activo, ose cuando haces click*/
+            .link:active{
+                outline: 5px solid blue;
+            }
+            /*Pinta el primer elemento*/
+            li:first-child{
+                color: #09f;
+            }
+            /*Pinta el ultimo elemento*/
+            li:last-child{
+                color: pink;
+            }
+
+            /*Selector mediante id*/
+            #name{
+                background: #09f;
+                color: white;
+                border: 1px;
+            }
+
+            body{
+                background: #dbfbff;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+       </style>
     </head>
     <body>
         <header>
@@ -41,10 +87,10 @@
             <h1>TENGO SUEÑO</h1>
             <nav>
                 <!--Enlaces internos-->
-                <a href="#frutas">Frutas</a>
-                <a href="#proyectos">Proyectos</a>
+                <a class="link" href="#frutas">Frutas</a>
+                <a class="link" href="#proyectos">Proyectos</a>
                 <!--Enlaces externos-->
-                <a href="https://twitch.tv/midudev" target="_blank"
+                <a class="link" href="https://twitch.tv/midudev" target="_blank"
                     rel="noreferrer">Twitch</a>
             </nav>
         </header>
